@@ -1,16 +1,11 @@
-//
-//  ADTErr.h
-//  sorting-algorithms-in-c
-//
-//  Created by efraim g on 22/07/2024.
-//
+// ADTErr.h
+// Sorting algorithms in C
 
-#ifndef ADTErr_h
-#define ADTErr_h
+#ifndef ADTERR_H
+#define ADTERR_H
 
 // Enumeration of General ADT Errors
-typedef enum
-{
+typedef enum {
     ERR_OK = 0,                  // No error
     ERR_GENERAL,                 // General error
     ERR_NOT_INITIALIZED,         // ADT not initialized
@@ -23,11 +18,9 @@ typedef enum
     ERR_DUPLICATE_KEY,           // Duplicate key
     ERR_WRONG_KEY,               // Incorrect key
     ERR_DATA_NOT_FOUND,          // Data not found
-    ERR_DUPLICATIOS_KEY,         // Duplicate key
-
 } ADTErr;
 
 // Function to handle errors and print corresponding messages
-void HandleErr(ADTErr errNum, char* msg);
+void HandleErr(ADTErr errNum, const char* msg);
 
-#endif /* ADTErr_h */
+#endif /* ADTERR_H */

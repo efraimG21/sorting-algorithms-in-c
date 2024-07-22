@@ -1,40 +1,35 @@
-//
-//  ADTErr.c
-//  sorting-algorithms-in-c
-//
-//  Created by efraim g on 22/07/2024.
-//
+// ADTErr.c
+// Sorting algorithms in C
 
 #include <stdio.h>
+#include <stddef.h> // For NULL
 
 #include "ADTErr.h"
 
-const char* ErrDescription[] =
-{
-    /* General ADT Errors - Description */
+// Array of error descriptions
+static const char* ErrDescription[] = {
     "OK",
     "General Error",
-    "Initialization error",
-    "Allocation error",
-    "ReAllocation error",
-    "Underflow error",
-    "Overflow error",
-    "Wrong index",
-    "Missing argument",
-    "Not allowed duplicatios key",
-    "Wrong Key",
-    "Data Not Found",
+    "Initialization Error",
+    "Allocation Error",
+    "Reallocation Error",
+    "Underflow Error",
+    "Overflow Error",
+    "Wrong Index",
+    "Missing Argument",
     "Duplicate Key",
+    "Wrong Key",
+    "Data Not Found"
 };
 
-void HandleErr(ADTErr errNum, char* msg)
-{
-    if (errNum >= 0 && errNum < sizeof(ErrDescription) / sizeof(ErrDescription[0]))
-    {
-        printf("ErrNum=%d, ErrDescription=%s, msg=%s\n", errNum, ErrDescription[errNum], msg);
+void HandleErr(ADTErr errNum, const char* msg) {
+    if (msg == NULL) {
+        msg = "No additional information provided";
     }
-    else
-    {
-        printf("Unknown error: ErrNum=%d, msg=%s\n", errNum, msg);
+
+    if (errNum >= 0 && errNum < (sizeof(ErrDescription) / sizeof(ErrDescription[0]))) {
+        printf("Error Number: %d, Description: %s, Message: %s\n", errNum, ErrDescription[errNum], msg);
+    } else {
+        printf("Unknown Error Number: %d, Message: %s\n", errNum, msg);
     }
 }
