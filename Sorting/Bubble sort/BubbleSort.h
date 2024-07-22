@@ -5,13 +5,7 @@
 #define BUBBLESORT_H
 
 #include "GenericVector.h"
-
-// Enum to represent comparison results
-typedef enum {
-    LESS_THAN = -1,
-    EQUAL,
-    GREATER_THAN
-} ComparisonResult;
+#include "ComparisonResult.h"
 
 // Type for comparison functions
 typedef ComparisonResult (*ComparisonFunc)(const void*, const void*);

@@ -4,6 +4,7 @@
 #ifndef GENERICVECTOR_H
 #define GENERICVECTOR_H
 
+#include <stddef.h>
 #include "ADTErr.h"
 
 // Forward declaration of the generic vector structure

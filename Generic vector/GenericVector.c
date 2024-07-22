@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
+#include <stddef.h>
 
 #include "ADTErr.h"
 #include "GenericVector.h"

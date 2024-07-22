@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "GenericVector.h"
+#include "ComparisonResult.h" 
 #include "BubbleSort.h"
 
 void BubbleSortTesting(void);

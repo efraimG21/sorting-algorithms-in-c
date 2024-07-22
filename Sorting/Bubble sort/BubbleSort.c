@@ -5,22 +5,28 @@
 #include <stddef.h>
 
 #include "BubbleSort.h"
+#include "ComparisonResult.h"
 #include "GenericVector.h"
 
-// Bubble Sort algorithm
-// Bubble Sort is a simple comparison-based sorting algorithm that repeatedly steps through
-// the list, compares adjacent elements, and swaps them if they are in the wrong order.
-// The pass through the list is repeated until the list is sorted.
-// The algorithm gets its name because smaller elements "bubble" to the top of the list with each pass.
-
-
-// * Time Complexity:
-// * - Best Case: O(n) when the list is already sorted. The algorithm makes a single pass without swaps.
-// * - Average Case: O(n^2) where n is the number of elements. This happens when the list is unordered.
-// * - Worst Case: O(n^2) when the list is sorted in reverse order.
-//
-// * Space Complexity:
-// * - O(1) because Bubble Sort is an in-place sorting algorithm, meaning it requires a constant amount of extra space.
+/**
+ * @brief Sorts a generic vector using the Bubble Sort algorithm.
+ *
+ * Bubble Sort is a simple comparison-based sorting algorithm. It works by repeatedly
+ * stepping through the vector, comparing adjacent elements, and swapping them if they
+ * are in the wrong order. Each pass through the vector moves the next largest element
+ * to its correct position. The process continues until the vector is sorted.
+ *
+ * Time Complexity:
+ * - Best Case: O(n) when the vector is already sorted. The algorithm makes a single pass without performing any swaps.
+ * - Average Case: O(n^2) where n is the number of elements. This occurs when the vector is unordered.
+ * - Worst Case: O(n^2) when the vector is sorted in reverse order.
+ *
+ * Space Complexity:
+ * - O(1) because Bubble Sort is an in-place sorting algorithm, meaning it requires a constant amount of extra space.
+ *
+ * @param vec Pointer to the generic vector to be sorted.
+ * @param compareFunc Function pointer to the comparison function used to determine the order of items.
+ */
 
 
 void BubbleSort(GenVector_t* vec, ComparisonFunc compareFunc) {
